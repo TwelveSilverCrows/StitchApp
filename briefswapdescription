@@ -1,0 +1,6 @@
+Smart Contract or DEX Aggregator Description
+----------
+-Wallet Connection (i.e MetaMask)
+-Use DEX Aggregator (i.e 1Inch API)
+-Split into respective percentages (based on packages bought)
+-Transactions recieved into main (webiste) wallet address
