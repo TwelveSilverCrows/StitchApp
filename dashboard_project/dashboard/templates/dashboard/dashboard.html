@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/material-dashboard.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Tables</a></li>
+                <li><a href="#">Billing</a></li>
+                <li><a href="#">Virtual Reality</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2>Dashboard</h2>
+            
+            <div class="cards">
+                <div class="card">
+                    <h3>Today's Money</h3>
+                    <p>{{ money_today }}</p>
+                </div>
+                <div class="card">
+                    <h3>Today's Users</h3>
+                    <p>{{ users_today }}</p>
+                </div>
+                <div class="card">
+                    <h3>New Clients</h3>
+                    <p>{{ new_clients }}</p>
+                </div>
+                <div class="card">
+                    <h3>Sales</h3>
+                    <p>{{ sales }}</p>
+                </div>
+            </div>
+
+            <canvas id="websiteViewsChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById("websiteViewsChart").getContext("2d");
+        var chart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: ["M", "T", "W", "T", "F", "S"],
+                datasets: [{
+                    label: "Website Views",
+                    data: { website_views,safe },
+                    borderColor: "red",
+                    fill: false
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
