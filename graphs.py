@@ -84,6 +84,9 @@ def slider_button():
 
     # Define corresponding time periods (in days) for slider
     periods = {
+        "1 Day": 1,
+        "3 Days": 3,
+        "7 Days": 7,
         "1 Month": 30,
         "3 Months": 90,
         "6 Months": 180,
@@ -136,7 +139,7 @@ def slider_button():
 
     # Add slider for period selection
     ax_slider = plt.axes([0.3, 0.05, 0.6, 0.03])  # Position for the slider
-    slider = Slider(ax_slider, "Time Period (Days)", 30, 1825, valinit=selected_days, valstep=30)
+    slider = Slider(ax_slider, "Time Period (Days)", 1, 1825, valinit=selected_days, valstep=30)
 
     # Function to update period selection
     def period_selected(val):
