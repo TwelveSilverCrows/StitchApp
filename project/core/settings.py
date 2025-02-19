@@ -4,6 +4,7 @@ Copyright (c) 2019 - present AppSeed.us
 """
 
 import os, environ
+from pathlib import Path
 
 env = environ.Env(
     # set casting, default value
@@ -13,6 +14,7 @@ env = environ.Env(
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 CORE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DIR = Path(__file__).resolve().parent.parent
 
 # Take environment variables from .env file
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
@@ -139,9 +141,10 @@ STATIC_ROOT = os.path.join(CORE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(CORE_DIR, 'apps/static'),
-)
+STATICFILES_DIRS = [
+    os.path.join(CORE_DIR, 'static'),
+    os.path.join(DIR, 'apps', 'static'),
+]
 
 
 #############################################################
