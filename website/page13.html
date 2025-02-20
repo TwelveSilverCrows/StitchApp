@@ -1,0 +1,109 @@
+<style>
+  .portfolio-container {
+    display: flex;
+    padding-top: 7px;
+    flex-direction: column;
+  }
+  .portfolio-content {
+    background-color: var(--light-blue, #abd2ff);
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-container {
+    background-color: var(--white, #ffffff);
+    z-index: 10;
+    display: flex;
+    margin-top: -7px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 21px 0;
+  }
+  .logo {
+    aspect-ratio: 2.67;
+    object-fit: contain;
+    object-position: center;
+    width: 328px;
+    max-width: 100%;
+  }
+  .icon {
+    aspect-ratio: 1.15;
+    object-fit: contain;
+    object-position: center;
+    width: 82px;
+    fill: var(--Dark-Blue, #2b3f6c);
+    align-self: flex-end;
+    margin: 13px 72px 0 0;
+  }
+  .portfolio-objective {
+    color: var(--black, #000001);
+    align-self: flex-start;
+    margin: 27px 0 0 40px;
+    font: 700 36px Noto Sans, sans-serif;
+  }
+  .portfolio-benefits {
+    background-color: var(--white, #ffffff);
+    margin-top: 23px;
+    color: var(--black, #000001);
+    padding: 49px 70px 22px;
+    font: 700 64px Noto Sans, sans-serif;
+  }
+  .highlight {
+    color: var(--white, #ffffff);
+  }
+  @media (max-width: 991px) {
+    .portfolio-container {
+      padding-right: 20px;
+    }
+    .portfolio-content {
+      max-width: 100%;
+    }
+    .logo-container {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+    .icon {
+      margin-right: 10px;
+    }
+    .portfolio-objective {
+      max-width: 100%;
+    }
+    .portfolio-benefits {
+      max-width: 100%;
+      font-size: 40px;
+      padding: 0 20px;
+    }
+  }
+</style>
+
+<div class="portfolio-container">
+  <div class="portfolio-content">
+    <div class="logo-container">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/32c928df524d087d40bee88c09d0de35cf77c5c55191c3c1c244c60a9e7a8afb?apiKey=c10184344db34d11ac877db715c2a558&"
+        class="logo"
+        alt="Company logo"
+      />
+    </div>
+    <img
+      loading="lazy"
+      src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/584103a21b97cfc94ccb7bf89aff0b6d03f8aff6bc076ec05e6e5e1673989395?apiKey=c10184344db34d11ac877db715c2a558&"
+      class="icon"
+      alt=""
+    />
+    <h2 class="portfolio-objective">
+      <span class="highlight">Objective</span>: Find a middle ground between
+      security and high-growth potential.
+      <span class="highlight">Strategy</span>: Exposure to mid-cap projects, mix
+      of blue-chip crypto, staking in one option, and a pure
+      <span class="highlight">growth</span>-oriented portfolio in the other.
+    </h2>
+    <div class="portfolio-benefits">
+      ✅ Why This Portfolio? ✔ Balanced infrastructure & DeFi → Investments in
+      Layer 1, Layer 2, and DeFi. ✔ High-growth AI projects → RNDR, GRT,
+      Celestia exposure to AI & Web3. ✔ Scalability → Investments in Celestia,
+      Arbitrum, Cosmos for blockchain evolution.
+    </div>
+  </div>
+</div>

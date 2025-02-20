@@ -1,0 +1,191 @@
+<style>
+  .moderate-portfolio-container {
+    display: flex;
+    padding-bottom: 21px;
+    flex-direction: column;
+  }
+  .portfolio-background {
+    background-color: rgba(171, 210, 255, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1px 0;
+  }
+  @media (max-width: 991px) {
+    .portfolio-background {
+      max-width: 100%;
+    }
+  }
+  .portfolio-content {
+    background-color: rgba(171, 210, 255, 1);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+  }
+  @media (max-width: 991px) {
+    .portfolio-content {
+      max-width: 100%;
+    }
+  }
+  .image-container {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 21px 0;
+  }
+  @media (max-width: 991px) {
+    .image-container {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  }
+  .portfolio-image {
+    aspect-ratio: 2.67;
+    object-fit: contain;
+    object-position: center;
+    width: 328px;
+    max-width: 100%;
+  }
+  .portfolio-details {
+    align-self: end;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    max-width: 1746px;
+    flex-direction: column;
+    font-family: Noto Sans, sans-serif;
+    font-weight: 700;
+    margin: -17px 49px 0 0;
+  }
+  @media (max-width: 991px) {
+    .portfolio-details {
+      max-width: 100%;
+      margin-right: 10px;
+    }
+  }
+  .portfolio-header {
+    align-self: end;
+    display: flex;
+    width: 100%;
+    max-width: 1366px;
+    gap: 20px;
+    font-size: 96px;
+    color: #010100;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .portfolio-header {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  .portfolio-title {
+    border: 1px solid rgba(0, 0, 0, 1);
+  }
+  @media (max-width: 991px) {
+    .portfolio-title {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  .portfolio-icon {
+    aspect-ratio: 1.15;
+    object-fit: contain;
+    object-position: center;
+    width: 82px;
+    fill: var(--Dark-Blue, #2b3f6c);
+    margin: auto 0;
+  }
+  .portfolio-objective {
+    color: #000001;
+    font-size: 36px;
+    margin-top: 47px;
+  }
+  @media (max-width: 991px) {
+    .portfolio-objective {
+      max-width: 100%;
+      margin: 40px 10px 0 0;
+    }
+  }
+  .portfolio-features {
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 10;
+    color: #000001;
+    margin: 31px 0 -22px;
+    padding: 94px 70px;
+    font: 700 64px Noto Sans, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .portfolio-features {
+      max-width: 100%;
+      font-size: 40px;
+      margin-bottom: 10px;
+      padding: 0 20px;
+    }
+  }
+  .highlight-text {
+    color: rgba(255, 255, 255, 1);
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+
+<section class="moderate-portfolio-container" aria-labelledby="portfolio-title">
+  <div class="portfolio-background">
+    <div class="portfolio-content">
+      <div class="image-container">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/32c928df524d087d40bee88c09d0de35cf77c5c55191c3c1c244c60a9e7a8afb?apiKey=c10184344db34d11ac877db715c2a558&"
+          class="portfolio-image"
+          alt="Moderate Portfolio illustration"
+        />
+      </div>
+      <div class="portfolio-details">
+        <div class="portfolio-header">
+          <h1 id="portfolio-title" class="portfolio-title">
+            Moderate Portfolio
+          </h1>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/584103a21b97cfc94ccb7bf89aff0b6d03f8aff6bc076ec05e6e5e1673989395?apiKey=c10184344db34d11ac877db715c2a558&"
+            class="portfolio-icon"
+            alt=""
+          />
+        </div>
+        <p class="portfolio-objective">
+          <span class="highlight-text">Objective</span>: Find a middle ground
+          between security and high-growth potential.
+          <span class="highlight-text">Strategy</span>: Exposure to mid-cap
+          projects, mix of blue-chip crypto, staking in one option, and a pure
+          growth-oriented portfolio in the other.
+        </p>
+      </div>
+      <div class="portfolio-features">
+        <h2 class="visually-hidden">Portfolio Features</h2>
+        <ul>
+          <li>✅ Why This Portfolio?</li>
+          <li>✔ AI & DeFi focus → Investments in RNDR, INJ, FET.</li>
+          <li>
+            ✔ Layer 2 scaling → Increased exposure to ARB, OP, MATIC for
+            Ethereum growth.
+          </li>
+          <li>✔ Passive income → Staking to earn additional yield.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

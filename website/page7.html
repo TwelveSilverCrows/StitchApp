@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Recommendation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .portfolio-section {
+        display: flex;
+        flex-direction: column;
+      }
+      .portfolio-container {
+        background-color: #abd2ff;
+        display: flex;
+        margin-top: 4px;
+        width: 100%;
+        padding-bottom: 85px;
+        flex-direction: column;
+        align-items: center;
+      }
+      @media (max-width: 991px) {
+        .portfolio-container {
+          max-width: 100%;
+        }
+      }
+      .header {
+        background-color: #fff;
+        align-self: stretch;
+        z-index: 10;
+        display: flex;
+        margin-top: -4px;
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 14px 0;
+      }
+      @media (max-width: 991px) {
+        .header {
+          max-width: 100%;
+          padding-right: 20px;
+        }
+      }
+      .logo {
+        aspect-ratio: 2.67;
+        object-fit: contain;
+        object-position: center;
+        width: 368px;
+        max-width: 100%;
+      }
+      .recommendation-title {
+        transform: rotate(0.0010117636640385418rad);
+        color: #000;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        margin-top: -13px;
+        font: 700 48px Noto Sans, sans-serif;
+        border: 1px solid rgba(255, 255, 255, 0);
+      }
+      @media (max-width: 991px) {
+        .recommendation-title {
+          max-width: 100%;
+          font-size: 40px;
+        }
+      }
+      .portfolio-options {
+        background-color: #fff;
+        align-self: stretch;
+        display: flex;
+        margin-top: 25px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 70px;
+      }
+      @media (max-width: 991px) {
+        .portfolio-options {
+          max-width: 100%;
+          padding: 0 20px;
+        }
+      }
+      .options-container {
+        width: 100%;
+        max-width: 1490px;
+      }
+      @media (max-width: 991px) {
+        .options-container {
+          max-width: 100%;
+        }
+      }
+      .options-row {
+        gap: 20px;
+        display: flex;
+      }
+      @media (max-width: 991px) {
+        .options-row {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+      }
+      .option-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 50%;
+        margin-left: 0;
+      }
+      @media (max-width: 991px) {
+        .option-column {
+          width: 100%;
+        }
+      }
+      .option-title {
+        transform: rotate(0.0010117636640385418rad);
+        color: #000100;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        font: 700 64px Rubik, sans-serif;
+        border: 1px solid rgba(255, 255, 255, 0);
+      }
+      @media (max-width: 991px) {
+        .option-title {
+          max-width: 100%;
+          margin-top: 40px;
+          font-size: 40px;
+        }
+      }
+      .portfolio-details {
+        margin-top: 33px;
+        width: 100%;
+        max-width: 1770px;
+      }
+      @media (max-width: 991px) {
+        .portfolio-details {
+          max-width: 100%;
+        }
+      }
+      .details-row {
+        gap: 20px;
+        display: flex;
+      }
+      @media (max-width: 991px) {
+        .details-row {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+      }
+      .detail-card {
+        border-radius: 37px;
+        background-color: #fff;
+        flex-grow: 1;
+        width: 100%;
+        padding: 36px 0 36px 33px;
+      }
+      @media (max-width: 991px) {
+        .detail-card {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+      .card-content {
+        gap: 20px;
+        display: flex;
+      }
+      @media (max-width: 991px) {
+        .card-content {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+      }
+      .content-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 55%;
+        margin-left: 0;
+      }
+      @media (max-width: 991px) {
+        .content-column {
+          width: 100%;
+        }
+      }
+      .portfolio-breakdown {
+        color: #000;
+        letter-spacing: 3.6px;
+        align-self: stretch;
+        margin: auto 0;
+        font: 700 24px Rubik, sans-serif;
+      }
+      @media (max-width: 991px) {
+        .portfolio-breakdown {
+          margin-top: 40px;
+        }
+      }
+      .chart-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 45%;
+        margin-left: 20px;
+      }
+      @media (max-width: 991px) {
+        .chart-column {
+          width: 100%;
+        }
+      }
+      .chart-image {
+        aspect-ratio: 1.08;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        flex-grow: 1;
+      }
+      @media (max-width: 991px) {
+        .chart-image {
+          margin-top: 40px;
+        }
+      }
+      .cta-text {
+        color: #000;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        margin: 57px 0 0 33px;
+        font: 700 36px Noto Sans, sans-serif;
+        border: 1px solid #001aff;
+      }
+      @media (max-width: 991px) {
+        .cta-text {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+      }
+      .highlight-yellow {
+        color: #fff600;
+      }
+      .highlight-blue {
+        color: #001aff;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="portfolio-section">
+      <div class="portfolio-container">
+        <header class="header">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/f4d2bdf431f978ac0a5432ba19cf80b74f8994fc9db46c99cc28b1a8efc2a6df?apiKey=c10184344db34d11ac877db715c2a558&"
+            class="logo"
+            alt="Company logo"
+          />
+        </header>
+        <h1 class="recommendation-title">
+          Based on your answers the
+          <span class="highlight-yellow">Moderate</span>
+          <span class="highlight-blue">portfolio's</span>
+          suit you the best!
+        </h1>
+        <div class="portfolio-options">
+          <div class="options-container">
+            <div class="options-row">
+              <div class="option-column">
+                <a href="page8.html" class="option-title">
+                  <span class="highlight-yellow">Moderate</span>1
+                </a>
+              </div>
+              <div class="option-column">
+                <a href="page10.html" class="option-title">
+                  <span class="highlight-yellow">Moderate</span>2
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-details">
+      <div class="details-row">
+        <div class="option-column">
+          <div class="detail-card">
+            <div class="card-content">
+              <div class="content-column">
+                <ul class="portfolio-breakdown">
+                  <li>22% Bitcoin (BTC)</li>
+                  <li>18% Ethereum (ETH)</li>
+                  <li>10% Solana (SOL)</li>
+                  <li>
+                    46% of 9 Altcoins
+                    <span>- growth potential + diversification</span>
+                  </li>
+                  <li>
+                    4% staking
+                    <span>- stability + passive income</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="chart-column">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/de3bacc68d485893ae359c31c8da9e4d9dfa811c79f765a69659ea551d287cea?apiKey=c10184344db34d11ac877db715c2a558&"
+                  class="chart-image"
+                  alt="Pie chart showing portfolio distribution for Moderate 1"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="option-column">
+          <div class="detail-card">
+            <div class="card-content">
+              <div class="content-column">
+                <ul class="portfolio-breakdown">
+                  <li>22% Bitcoin (BTC)</li>
+                  <li>20% Ethereum (ETH)</li>
+                  <li>13% Solana (SOL)</li>
+                  <li>
+                    45% 8 altcoins -
+                    <span>diversification</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="chart-column">
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/2ba74cd43fde2255d88bba936f78a70c31fcbd7493210352393b40c25f44f74e?apiKey=c10184344db34d11ac877db715c2a558&"
+                  class="chart-image"
+                  alt="Pie chart showing portfolio distribution for Moderate 2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="cta-text">
+      Press on the
+      <span class="highlight-blue">bundle</span>
+      if you want to know more about it
+    </p>
+  </div>
+</section>

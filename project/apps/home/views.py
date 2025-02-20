@@ -8,6 +8,10 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
+from django.shortcuts import render
+
+def test_page(request):
+    return render(request, 'home/test_page.html')
 
 
 @login_required(login_url="/login/")

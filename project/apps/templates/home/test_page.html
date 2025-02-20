@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Page</title>
+  <!-- Using an existing CSS file from the repo -->
+  <link rel="stylesheet" href="{% static 'assets/css/black-dashboard.css' %}">
+</head>
+<body>
+  <h1>Test Page</h1>
+  <p>If you see this page styled with Black Dashboard CSS, then it loads correctly.</p>
+</body>
+</html>
+
+<!-- <div class="content">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title text-center">What is your primary goal for investing in crypto?</h3>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <div class="option">
+                                <input type="radio" id="long-term" name="goal" value="long-term">
+                                <label for="long-term">Long-term wealth growth (e.g., retirement, generational wealth)</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="short-term" name="goal" value="short-term">
+                                <label for="short-term">Short-term gains (e.g., trading, taking advantage of market trends)</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="diversification" name="goal" value="diversification">
+                                <label for="diversification">Diversification of my investment portfolio</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="learning" name="goal" value="learning">
+                                <label for="learning">Learning about crypto and experimenting with small amounts</label>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    Progress Bar
+                    <div class="progress-container">
+                        <span class="progress-text">Progress Bar</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} -->

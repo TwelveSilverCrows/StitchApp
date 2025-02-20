@@ -1,0 +1,342 @@
+<style>
+  .portfolio-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-container {
+    background-color: #abd2ff;
+    display: flex;
+    margin-top: 4px;
+    width: 100%;
+    padding-bottom: 85px;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 991px) {
+    .portfolio-container {
+      max-width: 100%;
+    }
+  }
+  .header {
+    background-color: #fff;
+    align-self: stretch;
+    z-index: 10;
+    display: flex;
+    margin-top: -4px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 14px 0;
+  }
+  @media (max-width: 991px) {
+    .header {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  }
+  .logo {
+    aspect-ratio: 2.67;
+    object-fit: contain;
+    object-position: center;
+    width: 368px;
+    max-width: 100%;
+  }
+  .title {
+    transform: rotate(0.0010117636640385418rad);
+    color: #000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin-top: -13px;
+    font: 700 48px Noto Sans, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  @media (max-width: 991px) {
+    .title {
+      max-width: 100%;
+      font-size: 40px;
+    }
+  }
+  .highlight-yellow {
+    color: #fff600;
+  }
+  .highlight-blue {
+    color: #001aff;
+  }
+  .portfolio-types {
+    background-color: #fff;
+    align-self: stretch;
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 70px;
+  }
+  @media (max-width: 991px) {
+    .portfolio-types {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  .portfolio-types-container {
+    width: 100%;
+    max-width: 1490px;
+  }
+  @media (max-width: 991px) {
+    .portfolio-types-container {
+      max-width: 100%;
+    }
+  }
+  .portfolio-types-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .portfolio-types-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  .portfolio-type {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0;
+  }
+  @media (max-width: 991px) {
+    .portfolio-type {
+      width: 100%;
+    }
+  }
+  .portfolio-type-title {
+    transform: rotate(0.0010117636640385418rad);
+    color: #000100;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    font: 700 64px Rubik, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  @media (max-width: 991px) {
+    .portfolio-type-title {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+  }
+  .portfolio-details {
+    margin-top: 33px;
+    width: 100%;
+    max-width: 1770px;
+  }
+  @media (max-width: 991px) {
+    .portfolio-details {
+      max-width: 100%;
+    }
+  }
+  .portfolio-details-wrapper {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .portfolio-details-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  .portfolio-detail {
+    border-radius: 37px;
+    background-color: #fff;
+    flex-grow: 1;
+    width: 100%;
+    padding: 36px 0 36px 33px;
+  }
+  @media (max-width: 991px) {
+    .portfolio-detail {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .portfolio-detail-content {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .portfolio-detail-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  }
+  .portfolio-detail-text {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 55%;
+    margin-left: 0;
+  }
+  @media (max-width: 991px) {
+    .portfolio-detail-text {
+      width: 100%;
+    }
+  }
+  .portfolio-detail-list {
+    color: #000;
+    letter-spacing: 3.6px;
+    align-self: stretch;
+    margin: auto 0;
+    font: 700 24px Rubik, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .portfolio-detail-list {
+      margin-top: 40px;
+    }
+  }
+  .portfolio-detail-image {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 45%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .portfolio-detail-image {
+      width: 100%;
+    }
+  }
+  .portfolio-chart {
+    aspect-ratio: 1.08;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  @media (max-width: 991px) {
+    .portfolio-chart {
+      margin-top: 40px;
+    }
+  }
+  .cta-text {
+    color: #000;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    margin: 57px 0 0 33px;
+    font: 700 36px Noto Sans, sans-serif;
+    border: 1px solid #001aff;
+  }
+  @media (max-width: 991px) {
+    .cta-text {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+
+<section class="portfolio-section">
+  <div class="portfolio-container">
+    <header class="header">
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/f4d2bdf431f978ac0a5432ba19cf80b74f8994fc9db46c99cc28b1a8efc2a6df?apiKey=c10184344db34d11ac877db715c2a558&"
+        class="logo"
+        alt="Company logo"
+      />
+    </header>
+    <h1 class="title">
+      Based on your answers the
+      <span class="highlight-yellow">Moderate</span>
+      <span class="highlight-blue">portfolio's</span>
+      suit you the best !
+    </h1>
+    <div class="portfolio-types">
+      <div class="portfolio-types-container">
+        <div class="portfolio-types-wrapper">
+          <div class="portfolio-type">
+            <h2 class="portfolio-type-title">
+              <span class="highlight-yellow">Moderate</span>1
+            </h2>
+          </div>
+          <div class="portfolio-type">
+            <h2 class="portfolio-type-title">
+              <span class="highlight-yellow">Moderate</span>2
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="portfolio-details">
+      <div class="portfolio-details-wrapper">
+        <div class="portfolio-detail">
+          <div class="portfolio-detail-content">
+            <div class="portfolio-detail-text">
+              <ul class="portfolio-detail-list">
+                <li>22% Bitcoin (BTC)</li>
+                <li>18% Ethereum (ETH)</li>
+                <li>10% Solana (SOL)</li>
+                <li>
+                  46% of 9 Altcoins
+                  <span>- growth potential + diversification</span>
+                </li>
+                <li>
+                  4% staking
+                  <span>- stability + passive income</span>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-detail-image">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/de3bacc68d485893ae359c31c8da9e4d9dfa811c79f765a69659ea551d287cea?apiKey=c10184344db34d11ac877db715c2a558&"
+                class="portfolio-chart"
+                alt="Chart showing portfolio distribution for Moderate 1"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-detail">
+          <div class="portfolio-detail-content">
+            <div class="portfolio-detail-text">
+              <ul class="portfolio-detail-list">
+                <li>22% Bitcoin (BTC)</li>
+                <li>20% Ethereum (ETH)</li>
+                <li>13% Solana (SOL)</li>
+                <li>
+                  45% 8 altcoins -
+                  <span>diversification</span>
+                </li>
+              </ul>
+            </div>
+            <div class="portfolio-detail-image">
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/2ba74cd43fde2255d88bba936f78a70c31fcbd7493210352393b40c25f44f74e?apiKey=c10184344db34d11ac877db715c2a558&"
+                class="portfolio-chart"
+                alt="Chart showing portfolio distribution for Moderate 2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="cta-text">
+      Press on the
+      <span class="highlight-blue">bundle</span>
+      if you want to know more about it
+    </p>
+  </div>
+</section>

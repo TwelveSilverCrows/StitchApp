@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Table Section</title>
+    <style>
+      .crypto-container {
+        background-color: rgba(171, 210, 255, 1);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .crypto-logo {
+        color: #000;
+        margin: 20px 0;
+        font: 700 48px "Rubik", sans-serif;
+      }
+      .logo-text {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .needle-icon {
+        width: 20px;
+        height: 40px;
+        transform: rotate(15deg);
+        position: relative;
+        display: inline-block;
+        background-color: #000;
+      }
+      .crypto-table {
+        border-radius: 8px;
+        padding: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 40px 0;
+        background-color: #fff;
+      }
+      .table-row {
+        display: grid;
+        grid-template-columns: 40px 200px 150px 100px 100px 100px 200px 150px 150px 150px;
+        align-items: center;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .coin-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .coin-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      .price-change-positive {
+        color: #22c55e;
+      }
+      .price-change-negative {
+        color: #ef4444;
+      }
+      .cta-button {
+        border-radius: 30px;
+        padding: 15px 60px;
+        color: #000;
+        text-decoration: none;
+        margin-top: 40px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        font: 700 32px "Rubik", sans-serif;
+        display: inline-block;
+      }
+      .market-chart {
+        width: 100%;
+        height: 40px;
+      }
+      @media (max-width: 991px) {
+        .crypto-table {
+          overflow-x: auto;
+        }
+        .table-row {
+          grid-template-columns: 40px 150px 120px 80px 80px 80px 150px 120px 120px 120px;
+        }
+      }
+      @media (max-width: 640px) {
+        .crypto-logo {
+          font-size: 32px;
+        }
+        .cta-button {
+          font-size: 24px;
+          padding: 12px 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="crypto-container">
+      <div class="crypto-logo">
+        <div class="logo-text">
+          <span>St</span>
+          <div class="needle-icon"></div>
+          <span>tch</span>
+        </div>
+      </div>
+      <div class="crypto-table">
+        <div class="table-row">
+          <div>#</div>
+          <div>Name</div>
+          <div>Price</div>
+          <div>1h %</div>
+          <div>24h %</div>
+          <div>7d %</div>
+          <div>Market Cap</div>
+          <div>Volume(24h)</div>
+          <div>Circulating Supply</div>
+          <div>Last 7 Days</div>
+        </div>
+        <div class="table-row">
+          <div>1</div>
+          <div class="coin-info">
+            <img
+              src="https://placehold.co/24x24/f7931a/f7931a"
+              alt="BTC"
+              class="coin-icon"
+            />
+            <div>Bitcoin BTC</div>
+          </div>
+          <div>$50,268.74</div>
+          <div class="price-change-positive">+0.89%</div>
+          <div class="price-change-positive">+3.55%</div>
+          <div class="price-change-positive">+8.10%</div>
+          <div>$1,049,558,471,874</div>
+          <div>$38,724,982,157</div>
+          <div>19.624M BTC</div>
+          <div>
+            <svg class="market-chart" viewBox="0 0 100 40">
+              <path
+                d="M0 20 L10 15 L20 25 L30 20 L40 30 L50 25 L60 35 L70 30 L80 35 L90 30 L100 35"
+                fill="none"
+                stroke="#22c55e"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="table-row">
+          <div>2</div>
+          <div class="coin-info">
+            <img
+              src="https://placehold.co/24x24/627eea/627eea"
+              alt="ETH"
+              class="coin-icon"
+            />
+            <div>Ethereum ETH</div>
+          </div>
+          <div>$2,720.43</div>
+          <div class="price-change-positive">+0.43%</div>
+          <div class="price-change-positive">+0.76%</div>
+          <div class="price-change-positive">+3.44%</div>
+          <div>$327,873,285,309</div>
+          <div>$20,627,600,195</div>
+          <div>120.55M ETH</div>
+          <div>
+            <svg class="market-chart" viewBox="0 0 100 40">
+              <path
+                d="M0 20 L10 25 L20 15 L30 20 L40 15 L50 25 L60 20 L70 25 L80 20 L90 25 L100 20"
+                fill="none"
+                stroke="#22c55e"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="table-row">
+          <div>3</div>
+          <div class="coin-info">
+            <img
+              src="https://placehold.co/24x24/345d9d/345d9d"
+              alt="XRP"
+              class="coin-icon"
+            />
+            <div>XRP XRP</div>
+          </div>
+          <div>$2.62</div>
+          <div class="price-change-positive">+1.48%</div>
+          <div class="price-change-positive">+0.72%</div>
+          <div class="price-change-positive">+7.48%</div>
+          <div>$151,250,478,568</div>
+          <div>$5,157,310,945</div>
+          <div>57.81B XRP</div>
+          <div>
+            <svg class="market-chart" viewBox="0 0 100 40">
+              <path
+                d="M0 20 L10 15 L20 25 L30 20 L40 30 L50 25 L60 35 L70 30 L80 35 L90 30 L100 25"
+                fill="none"
+                stroke="#22c55e"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="table-row">
+          <div>4</div>
+          <div class="coin-info">
+            <img
+              src="https://placehold.co/24x24/26a17b/26a17b"
+              alt="USDT"
+              class="coin-icon"
+            />
+            <div>Tether USDT</div>
+          </div>
+          <div>$0.9997</div>
+          <div class="price-change-negative">-0.01%</div>
+          <div class="price-change-positive">+0.01%</div>
+          <div class="price-change-negative">-0.03%</div>
+          <div>$141,742,979,634</div>
+          <div>$80,176,547,218</div>
+          <div>141.77B USDT</div>
+          <div>
+            <svg class="market-chart" viewBox="0 0 100 40">
+              <path
+                d="M0 20 L10 20 L20 20 L30 19 L40 21 L50 20 L60 20 L70 19 L80 21 L90 20 L100 19"
+                fill="none"
+                stroke="#ef4444"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="table-row">
+          <div>5</div>
+          <div class="coin-info">
+            <img
+              src="https://placehold.co/24x24/f3ba2f/f3ba2f"
+              alt="BNB"
+              class="coin-icon"
+            />
+            <div>BNB BNB</div>
+          </div>
+          <div>$557.12</div>
+          <div class="price-change-negative">-0.21%</div>
+          <div class="price-change-negative">-0.38%</div>
+          <div class="price-change-positive">+1.71%</div>
+          <div>$83,624,643,464</div>
+          <div>$2,035,235,125</div>
+          <div>142.47M BNB</div>
+          <div>
+            <svg class="market-chart" viewBox="0 0 100 40">
+              <path
+                d="M0 20 L10 25 L20 15 L30 20 L40 25 L50 15 L60 20 L70 25 L80 20 L90 25 L100 20"
+                fill="none"
+                stroke="#22c55e"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <a href="page2.html" class="cta-button">get started</a>
+    </div>
+  </body>
+</html>

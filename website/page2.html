@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investment Goals</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .investment-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-height: 100vh;
+        background-color: rgba(171, 210, 255, 1);
+      }
+      .investment-header {
+        background-color: #fff;
+        width: 100%;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .investment-logo {
+        width: 368px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto 10px;
+      }
+      .investment-title {
+        color: #000;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(0, 26, 255, 1);
+        padding: 10px 20px;
+        margin: 0 auto;
+        font: 700 64px "Noto Sans", sans-serif;
+      }
+      .investment-options {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      .investment-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        gap: 20px;
+      }
+      .investment-radio {
+        width: 34px;
+        height: 34px;
+        border: 1px solid #000;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+      }
+      .investment-radio::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #0000ff;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+      input[type="radio"]:checked + .investment-radio::after {
+        opacity: 1;
+      }
+      .investment-option-text {
+        color: #000;
+        font: 700 36px "Noto Sans", sans-serif;
+      }
+      .progress-section {
+        margin-top: 60px;
+        padding: 0 20px;
+      }
+      .progress-label {
+        color: #000;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(0, 26, 255, 1);
+        margin-bottom: 20px;
+        font: 700 64px "Noto Sans", sans-serif;
+      }
+      .progress-bar {
+        width: 100%;
+        height: 73px;
+        position: relative;
+        background-color: #fff;
+      }
+      .progress-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 30%;
+        background-color: #0000ff;
+      }
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+      @media (max-width: 991px) {
+        .investment-title {
+          font-size: 40px;
+        }
+        .investment-options {
+          padding: 20px;
+        }
+        .investment-option {
+          margin-bottom: 30px;
+        }
+        .investment-option-text {
+          font-size: 28px;
+        }
+        .progress-label {
+          font-size: 40px;
+        }
+      }
+      @media (max-width: 640px) {
+        .investment-logo {
+          width: 280px;
+        }
+        .investment-title {
+          font-size: 32px;
+          padding: 8px 16px;
+        }
+        .investment-option-text {
+          font-size: 24px;
+        }
+        .progress-label {
+          font-size: 32px;
+        }
+        .progress-bar {
+          height: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="investment-container">
+      <div class="investment-header">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/c10184344db34d11ac877db715c2a558/f4d2bdf431f978ac0a5432ba19cf80b74f8994fc9db46c99cc28b1a8efc2a6df?apiKey=c10184344db34d11ac877db715c2a558&"
+          alt="Logo"
+          class="investment-logo"
+        />
+        <h1 class="investment-title">
+          What is your primary goal for investing in crypto?
+        </h1>
+      </div>
+      <form class="investment-options" action="page3.html" method="get">
+        <div class="investment-option">
+          <input
+            type="radio"
+            id="long-term"
+            name="investment-goal"
+            value="long-term"
+            class="visually-hidden"
+            required
+          />
+          <label for="long-term" class="investment-radio" tabindex="0"></label>
+          <label for="long-term" class="investment-option-text">
+            Long-term wealth growth (e.g., retirement, generational wealth)
+          </label>
+        </div>
+        <div class="investment-option">
+          <input
+            type="radio"
+            id="short-term"
+            name="investment-goal"
+            value="short-term"
+            class="visually-hidden"
+          />
+          <label for="short-term" class="investment-radio" tabindex="0"></label>
+          <label for="short-term" class="investment-option-text">
+            Short-term gains (e.g., trading, taking advantage of market trends)
+          </label>
+        </div>
+        <div class="investment-option">
+          <input
+            type="radio"
+            id="diversification"
+            name="investment-goal"
+            value="diversification"
+            class="visually-hidden"
+          />
+          <label
+            for="diversification"
+            class="investment-radio"
+            tabindex="0"
+          ></label>
+          <label for="diversification" class="investment-option-text">
+            Diversification of my investment portfolio
+          </label>
+        </div>
+        <div class="investment-option">
+          <input
+            type="radio"
+            id="learning"
+            name="investment-goal"
+            value="learning"
+            class="visually-hidden"
+          />
+          <label for="learning" class="investment-radio" tabindex="0"></label>
+          <label for="learning" class="investment-option-text">
+            Learning about crypto and experimenting with small amounts
+          </label>
+        </div>
+        <div class="progress-section">
+          <div class="progress-label">progress bar</div>
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-valuenow="30"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+        <button type="submit" class="visually-hidden">Submit</button>
+      </form>
+    </div>
+    <script>
+      document.querySelectorAll(".investment-radio").forEach((radio) => {
+        radio.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            radio.previousElementSibling.checked = true;
+            radio.closest("form").submit();
+          }
+        });
+      });
+      document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.addEventListener("change", () => {
+          radio.closest("form").submit();
+        });
+      });
+    </script>
+  </body>
+</html>
